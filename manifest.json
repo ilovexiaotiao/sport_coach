@@ -125,5 +125,39 @@
 				}
 			}
 		}
+	},
+	"dependencies":{
+		"pages": {
+			"index.html": {
+				"href": "index.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"img/sicon4.png",
+				"img/lisimg3.png",
+				"img/lisimg5.png",
+				"img/sicon5.png",
+				"img/lisimg4.png",
+				"img/sicon3.png",
+				"js/swiper.min.js",
+				"css/mui.css",
+				"LICENSE",
+				"page/lesson/lesson_list.html",
+				"img/lisimg6.png",
+				"img/videoimg.jpg",
+				"css/swiper.min.css",
+				"page/lesson/lesson_detail.html",
+				"js/mui.js",
+				"page/lesson/复制 lesson_list.html",
+				"lib/css/lesson_list.css"
+			]
+		}
 	}
 }
