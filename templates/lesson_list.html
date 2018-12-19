@@ -3,33 +3,24 @@
 
 	<head>
 
-		<head>
 			<meta charset="UTF-8">
 			<title>课程列表</title>
 			<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-			<link href="../../css/mui.min.css" rel="stylesheet" />
+			<link href="{{ url_for('static', filename='css/mui.min.css') }}" rel="stylesheet" />
 			<!-- Link Swiper's CSS -->
-			<link rel="stylesheet" href="../../css/swiper.min.css">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css')}}">
 			<!-- Custom styles -->
-			<link rel="stylesheet" href="../../lib/css/lesson_list.css">
+			<link rel="stylesheet" href="{{ url_for('static', filename='lib/css/lesson_list.css')}}">
+
 			<!--Jquery-->
-			<script type="text/javascript" src=""></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 		</head>
 
 		<body>
 			<!--MUI INIT-->
-			<script src="../../js/mui.min.js"></script>
+			<script src="{{ url_for('static', filename='js/mui.min.js')}}"></script>
 			<script type="text/javascript">
-			mui.init({
-    subpages:[{
-      url:'lesson_list_content.html',
-      id:'row-list',
-      styles:{
-        top:'500px',//mui标题栏默认高度为45px；
-        bottom:'0px'//默认为0px，可不定义；
-      }
-    }]
-  });
+				mui.init()
 			</script>
 
 			<!--HEADER Part-->
@@ -68,6 +59,7 @@
 									<a href="# ">
 										<a id="map_row_icon" class="mui-icon mui-icon-map ">
 										</a>
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -88,26 +80,20 @@
 				<!--缩略图部分-->
 				<div class="swiper-container mui-row ">
 					<div class="swiper-wrapper ">
-						<div id="tab-item1" class="swiper-slide " style="background-image:url(../../img/lisimg3.png) "></div>
-						<div id="tab-item2" class="swiper-slide " style="background-image:url(../../img/lisimg4.png) "></div>
-						<div id="tab-item3" class="swiper-slide " style="background-image:url(../../img/lisimg5.png) "></div>
-						<div id="tab-item4" class="swiper-slide " style="background-image:url(../../img/lisimg6.png) "></div>
+						<div id="tab-item1" class="swiper-slide " style="background-image:url({{ url_for('static', filename='img/lisimg3.png')}})"></div>
+						<div id="tab-item2" class="swiper-slide " style="background-image:url({{ url_for('static', filename='img/lisimg4.png')}})"></div>
+						<!--<div id="tab-item3" class="swiper-slide " style="background-image:url({{ url_for('static', filename='img/lisimg5.png')}})"></div>-->
+						<!--<div id="tab-item4" class="swiper-slide " style="background-image:url({{ url_for('static', filename='img/lisimg6.png')}})"></div>-->
 					</div>
 					<!-- Add Pagination -->
 					<div class="swiper-pagination "></div>
 				</div>
 
-				<!--运动标题部分-->
-				<div id="sport-name" class="mui-row">
-					<h4>运动名称</h4>
-					<div id="sport-desc" class="mui-collapse-content">
-						<p>运动时间|运动类型|运动名人</p>
-					</div>
-				</div>
 
-				<!--项目列表-->
-				<div id="row-list">
-					
+
+				<!--运动标题部分和项目列表-->
+				<div id="list-row">
+
 				</div>
 
 				<!--课程推广-->
@@ -187,12 +173,13 @@
 						<span class="mui-tab-label">个人</span>
 					</a>
 				</nav>
-
+			</div>
 				<!-- Swiper JS -->
-				<script src="../../js/swiper.min.js "></script>
+				<script src="{{ url_for('static', filename='js/swiper.min.js')}}"></script>
 
 				<!-- Initialize Swiper -->
 				<script>
+					var checkres;
 					var swiper = new Swiper('.swiper-container', {
 						effect: 'coverflow',
 						grabCursor: true,
@@ -206,29 +193,60 @@
 							modifier: 1,
 							slideShadows: true
 						},
-						//调用Swiper过渡函数，在滑动结束后选定元素	
+						//调用Swiper过渡函数，在滑动结束后选定元素
 						on: {
 							transitionEnd: function() {
-								var index = "gotoitem" + (this.activeIndex + 1)
-								var swipertriger = document.getElementById(index);
-								//alert(swipertriger.id)
-								mui.trigger(swipertriger, 'touchstart');
-								mui.trigger(swipertriger, 'tap');
-								mui('#row-list').refresh();
-								//alert("OK")
-								var current = document.querySelector(".mui-slider-item .mui-control-content .mui-active");
-								// 						    alert(current);
-								// 						    if(swipertriger !== current) {
-								//              				current.classList.remove('mui-active');
-								//              				swipertriger.classList.add('mui-active');
+								var index = (this.activeIndex) .toString();
+								//alert(this.activeIndex);
+								var dataorigin={
+                   					 'index': index,
+            						};
+            					var data =JSON.stringify(dataorigin);
+            					//alert(data);
+            					$.ajax({
+            						async:false,
+									url:'/lesson_list',
+									type:'POST',
+									data:data,
+									dataType: 'json',
+									contentType: 'application/json; charset=UTF-8',
+									success:function(res){
+										console.log(res);
+										console.log(0);
+										document.getElementById("list-row").innerHTML = res;
+
+									},
+									error:function (res) {
+										console.log(res);
+										console.log(1);
+										//alert(res.responseText);
+										document.getElementById("list-row").innerHTML = res.responseText;
+
+										}
+										});
+								mui(".mui-slider").slider({
+  interval:0//自动轮播周期，若为0则不自动播放，默认为0；
+});
+								//var swipertriger = document.getElementById(index);
+								//mui('#row-list').refresh();
+								//alert(swipertriger.id);
+								//mui.trigger(swipertriger, 'touchstart');
+								//alert("OK");
+								//mui.trigger(swipertriger, 'tap');
+								//alert("OK1");
 							}
 						},
-
 						pagination: {
 							el: '.swiper-pagination',
 						},
-						//						
+						//
 					});
 				</script>
+
+
+
+
 		</body>
+
 </html>
+

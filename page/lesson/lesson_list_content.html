@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<!-- Link Swiper's CSS -->
+			<link rel="stylesheet" href="../../css/swiper.min.css">
+			<!-- Custom styles -->
+			<link rel="stylesheet" href="../../lib/css/lesson_list.css" />
+	</head>
+
+	<body>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+						<!--项目列表-->
+				<div class="mui-slider">
+					<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<!--选择栏-->
+						<a id='gotoitem1' class="mui-control-item" href="#20181214">12月14日</a>
+						<a id='gotoitem2' class="mui-control-item" href="#20181215">12月15日</a>
+						<a id='gotoitem3' class="mui-control-item" href="#item3">12月16日</a>
+						<a id='gotoitem4' class="mui-control-item" href="#item4">12月17日</a>
+					</div>
+					<!--选择光标-->
+					<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+					<!--列表页-->
+					<div class="mui-slider-group">
+						<div id="20181214" class="mui-slider-item mui-control-content mui-active">
+							<ul class="mui-table-view">
+								<!--整个row-->
+								<li class="mui-table-view-cell">
+									<div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3 lesson_time">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3 lesson_coach">
+											<a href="#">
+												<h4>高中华</h4>
+												<div class="mui-collapse-content">
+													<h6>瑜伽老师</h6>
+												</div>
+											</a>
+										</div>
+										<!--按钮row-->
+										<div class="mui-col-xl-3 lesson_detail">
+											<button type="button" class="mui-btn mui-btn-yellow">详情</button>
+										</div>
+									</div>
+								</li>
+								<!--整个row-->
+								<li class="mui-table-view-cell">
+									<div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3" style="width: 40%;">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
+											<a href="#">
+												<h4>高中华</h4>
+												<div class="mui-collapse-content">
+													<h6>瑜伽老师</h6>
+												</div>
+											</a>
+										</div>
+										<!--按钮row-->
+										<div class="mui-col-xl-3" style="width:25%;text-align: right;">
+											<button type="button" class="mui-btn mui-btn-yellow">详情</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="20181215" class="mui-slider-item mui-control-content">
+							<ul class="mui-table-view">
+								<!--整个row-->
+								<li class="mui-table-view-cell">
+									<div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3" style="width: 40%;">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
+											<a href="#">
+												<h4>张中华</h4>
+												<div class="mui-collapse-content">
+													<h6>现代舞老师</h6>
+												</div>
+											</a>
+										</div>
+										<!--按钮row-->
+										<div class="mui-col-xl-3" style="width:25%;text-align: right;">
+											<button type="button" class="mui-btn mui-btn-yellow">详情</button>
+										</div>
+									</div>
+								</li>
+								<!--整个row-->
+								<li class="mui-table-view-cell">
+									<div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3" style="width: 40%;">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
+											<a href="#">
+												<h4>张中华</h4>
+												<div class="mui-collapse-content">
+													<h6>现代舞老师</h6>
+												</div>
+											</a>
+										</div>
+										<!--按钮row-->
+										<div class="mui-col-xl-3" style="width:25%;text-align: right;">
+											<button type="button" class="mui-btn mui-btn-yellow">详情</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="item3" class="mui-slider-item mui-control-content">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">第2个选项卡子项</li>
+								<li class="mui-table-view-cell">第2个选项卡子项</li>
+							</ul>
+						</div>
+						<div id="item4" class="mui-slider-item mui-control-content">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">第2个选项卡子项</li>
+								<li class="mui-table-view-cell">第2个选项卡子项</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+	</body>
+
+</html>
