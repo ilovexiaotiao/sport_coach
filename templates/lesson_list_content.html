@@ -16,16 +16,16 @@
 <div class="mui-slider">
 					<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 						<!--选择栏-->
-						{% for key,value in result.items() %}
-						<a id='gotoitem1' class="mui-control-item" href="#{{key}}">{{key}}</a>
+						{% for i in datelist %}
+						<a class="mui-control-item" href="#{{i}}">{{i}}</a>
 						{%endfor%}
 					</div>
 					<!--选择光标-->
-					<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+					<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
 					<!--列表页-->
 					<div class="mui-slider-group">
 						{% for key,value in result.items() %}
-
+						<!--{% if key in datelist%}-->
 						<div id="{{key}}" class="mui-slider-item mui-control-content">
 							<ul class="mui-table-view">
 								<!--整个row-->
@@ -45,9 +45,9 @@
 										<!--教练row-->
 										<div class="mui-col-xl-3 lesson_coach">
 											<a href="#">
-												<h4>{{i["teacher"]}}</h4>
+												<h4>{{i["type"]}}</h4>
 												<div class="mui-collapse-content">
-													<h6>{{i["type"]}}</h6>
+													<h6>{{i["teacher"]}}</h6>
 												</div>
 											</a>
 										</div>
@@ -62,8 +62,7 @@
 									{% endfor%}
 							</ul>
 						</div>
-
-
+						<!--{% endif %}-->
 						{% endfor%}
 					</div>
 				</div>

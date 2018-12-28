@@ -4,113 +4,54 @@ import os
 from flask import Flask, request, redirect, url_for,send_from_directory,render_template,make_response,jsonify
 from werkzeug import secure_filename
 import urllib,urllib2
-import json
+import json,os,datetime
 import redis
 import collections
 
 app = Flask(__name__)
-data = {
-    "0": {
-        "name": "瑜伽",
-        "desc": "45分钟|舞蹈|免费",
-        "arrange": {
-            "20181214": [{
-                "start": "16:00",
-                "end": "17:00",
-                "teacher": "高中华1",
-                "type": "瑜伽老师",
-                "url": ""
-                    },
-                    {
-                "start": "16:00",
-                "end": "17:00",
-                "teacher": "高中华1",
-                "type": "瑜伽老师",
-                "url": ""
-                    },
-                ],
+path = "E:\\sport_coach\\static\\json\\lesson_list1.json"
+with open(path,"r") as f:
+    # file = file.decode("utf-8-sig")
+    data = json.load(f)
 
-            "20181215": [{
-                "date": "12月14日",
-                "start": "16:00",
-                "end": "17:00",
-                "teacher": "刘中华1",
-                "type": "瑜伽老师",
-                "url": ""
-            },
-                {
-                    "date": "12月14日",
-                    "start": "16:00",
-                    "end": "17:00",
-                    "teacher": "王中华1",
-                    "type": "瑜伽老师",
-                    "url": ""
-                }
-            ]
-        }
-    },
-
-    "1": {
-        "name": "交谊舞",
-        "desc": "45分钟|舞蹈|免费",
-        "arrange": {
-            "20181214": [{
-                "date": "12月14日",
-                "start": "16:00",
-                "end": "17:00",
-                "teacher": "高中华",
-                "type": "舞蹈老师",
-                "url": ""
-            },
-                {
-                    "date": "12月14日",
-                    "start": "16:00",
-                    "end": "17:00",
-                    "teacher": "高中华",
-                    "type": "舞蹈老师",
-                    "url": ""
-                }
-            ],
-            "20181215": [{
-                "date": "12月14日",
-                "start": "16:00",
-                "end": "17:00",
-                "teacher": "刘中华",
-                "type": "舞蹈老师",
-                "url": ""
-            },
-                {
-                    "date": "12月14日",
-                    "start": "16:00",
-                    "end": "17:00",
-                    "teacher": "王中华",
-                    "type": "舞蹈老师",
-                    "url": ""
-                }
-            ]
-
-        }
-    }
-}
 
 class Alist(object):
-    def __init__(self,index,datas):
+    def __init__(self,index,datas,datelist):
         result_sorted=collections.OrderedDict()
         self.index = index
         self.indexname = datas[index]["name"]
         self.indexdesc = datas[index]["desc"]
-        print self.indexname
+        #print self.indexname
         result = datas.get(index)["arrange"]
         key_list = result.keys()
         key_list.sort()
         #print key_list
         result_sort = result_sorted.fromkeys(key_list)
-        print result_sort
+        #print result_sort
             # 循环赋值
         for i in range(0,len(key_list)):
-            # if key_list[i] == result[i][0]:
-            result_sort[key_list[i]] = result.get(key_list[i])
-        self.result_sorted = result_sort
+            if key_list[i] in datelist:
+                print key_list[i]
+                result_sort[key_list[i]] = result.get(key_list[i])
+            self.result_sorted = result_sort
+
+class Adate(object):
+    def __init__(self):
+        self.date = datetime.date.today() + datetime.timedelta(days=1)
+
+
+    def time_string(self,i):
+        date1 = self.date + datetime.timedelta(days=i)
+        return date1.strftime(
+            '%a')
+
+    def get_date_list(self):
+        list = []
+        for i in range(0,3):
+            list.append(self.time_string(i))
+        return list
+
+
 
 
 @app.route('/lesson_list',methods = ['POST', 'GET'])
@@ -118,11 +59,14 @@ def get_list():
     if request.method == 'POST':
         strings = request.get_json()
         indexname=strings['index']
-        list = Alist(indexname, data)
+        dates = Adate()
+        datelist = dates.get_date_list()
+        list = Alist(indexname, data, datelist)
+        print list.result_sorted
         resp=make_response()
         resp.status_code = 200
         resp.headers["content-type"] = "text/html"
-        resp.response = render_template('lesson_list_content.html',result= list.result_sorted,indexname=list.indexname,desc=list.indexdesc)
+        resp.response = render_template('lesson_list_content.html',result= list.result_sorted,indexname=list.indexname,desc=list.indexdesc,datelist = datelist)
         #return jsonify(list.result)
         return resp
     else:
