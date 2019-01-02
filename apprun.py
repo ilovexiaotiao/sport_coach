@@ -9,7 +9,7 @@ import json, os, datetime
 import collections
 
 app = Flask(__name__)
-path = "D:\\sport_coach\\static\\json\\lesson_list1.json"
+path = "E:\sport_coach\static\json\lesson_list1.json"
 with open(path, "r") as f:
     # file = file.decode("utf-8-sig")
     data = json.load(f)
@@ -46,10 +46,12 @@ class Alist(object):
 
 class Adate(object):
     def __init__(self):
-        self.date = datetime.date.today() + datetime.timedelta(days=1)
+        self.date = datetime.date.today()
 
     def time_string(self, i):
         date1 = self.date + datetime.timedelta(days=i)
+        # print date1.strftime(
+        #     '%a')
         return date1.strftime(
             '%a')
 
@@ -59,7 +61,7 @@ class Adate(object):
 
     # 获取日期字典
     def get_date_dict(self):
-        dic = {}
+        dic = collections.OrderedDict()
         list = []
         for i in range(0, 3):
             list.append(self.time_string(i))
@@ -89,9 +91,9 @@ def get_list():
         dates = Adate()
         datedict = dates.get_date_dict()
         datelist = datedict.keys()
-        # print datedict
+        # print datelist
         list = Alist(indexname, data, datelist)
-        # print type(list.result_sorted.values())
+        # print list.result_sorted
         resp = make_response()
         resp.status_code = 200
         resp.headers["content-type"] = "text/html"
@@ -104,6 +106,29 @@ def get_list():
         sorted_result = sorted(data.items(), key=lambda x: x[1], reverse=False)
         sorted_result = sorted_result[0][1]["arrange"]
     return render_template('lesson_list.html', result=sorted_result)
+
+@app.route('/store_map')
+def store_map():
+    return render_template('store_map.html')
+
+
+@app.route('/store_desc')
+def store_desc():
+    return render_template('store_desc.html')
+
+@app.route('/lesson_desc')
+def lesson_desc():
+    return render_template('lesson_desc.html')
+
+
+@app.route('/teacher_desc')
+def teacher_desc():
+    return render_template('teacher_desc.html')
+
+
+@app.route('/lesson_detail')
+def lesson_detail():
+    return render_template('lesson_detail.html')
 
 
 if __name__ == "__main__":

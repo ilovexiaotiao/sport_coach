@@ -65,8 +65,8 @@
 						<div id="map_row" class="mui-col-xs-2 ">
 							<ul class="mui-table-view ">
 								<li class="mui-table-view-cell ">
-									<a href="# ">
-										<a id="map_row_icon" class="mui-icon mui-icon-map ">
+									<a>
+										<a id="map_row_icon" class="mui-icon mui-icon-map " href="../lesson/lesson_list.html">
 										</a>
 								</li>
 							</ul>
@@ -215,6 +215,7 @@
 								mui.trigger(swipertriger, 'touchstart');
 								mui.trigger(swipertriger, 'tap');
 								mui('#row-list').refresh();
+								mui().refresh(true)
 								//alert("OK")
 								var current = document.querySelector(".mui-slider-item .mui-control-content .mui-active");
 								// 						    alert(current);

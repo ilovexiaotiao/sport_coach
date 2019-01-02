@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+
+	<head>
+
+		<head>
+			<meta charset="UTF-8">
+			<title>课程列表</title>
+			<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+			<link href="../../css/mui.min.css" rel="stylesheet" />
+			<!-- Link Swiper's CSS -->
+			<link rel="stylesheet" href="../../css/swiper.min.css">
+			<!-- Custom styles -->
+			<link rel="stylesheet" href="../../lib/css/lesson_list.css" />
+			<!--App自定义的css-->
+			<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+			<!--超值套餐-->
+			<link rel="stylesheet" href="../../css/move.min.css" />
+			<!--Jquery-->
+			<script type="text/javascript" src=""></script>
+			<!--12.17内容为空，显示界面-->
+			<script type="text/javascript" src="../../js/move.js" ></script>
+		</head>
+
+		<body>
+			<!--MUI INIT-->
+			<script src="../../js/mui.min.js"></script>
+			<script type="text/javascript">
+				mui.init()
+			</script>
+
+			<!--HEADER Part-->
+			<!--导航栏-->
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">老师课程</h1>
+				<!--右侧按钮组-->
+				<a class="mui-icon mui-icon-bars mui-pull-right" style="padding-left: 15px;padding-right: 15px;"></a>
+			
+			</header>
+
+			<!--BODY PART-->
+			<div class="mui-content">
+				<!--首栏部分-->
+				<div id="first_row" class="mui-content">
+					<div class="mui-row">
+						<!--地址栏-->
+						<div id="address_bar" class="mui-col-xs-9">
+							<ul class="mui-table-view ">
+								<li class="mui-table-view-cell ">
+									<a class="mui-navigate-right " href="dianpu.html">
+										<h4>店面地址</h4>
+										<div class="mui-collapse-content ">
+											<p>详细地址</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--地图栏-->
+						<div id="map_row" class="mui-col-xs-2 ">
+							<ul class="mui-table-view ">
+								<li class="mui-table-view-cell ">
+									<a href="# ">
+										<a id="map_row_icon" class="mui-icon mui-icon-map ">
+										</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!--快捷入口部分-->
+				<div id="swift_entry" class="mui-row ">
+					<div class="mui-col-xs-12 ">
+						<!--推广按钮组-->
+						<div class="mui-table-view ">
+							<button type="button " class="mui-btn mui-btn-negative " style="width: 40%;padding-right: 3%; height: 50px; margin:5px; ">推荐课程1</button>
+							<button type="button " class="mui-btn mui-btn-success " style="width: 40%;padding-right: 3%; height: 50px; margin:5px; ">推荐课程2</button>
+						</div>
+					</div>
+				</div>
+
+				<!--缩略图部分-->
+				<div class="swiper-container mui-row ">
+					<div class="swiper-wrapper ">
+					
+							<div class="swiper-slide " style="background-image:url(../../img/lisimg3.png) ">
+								<a href="#middlePopover"><div style="width: 110px;height: 150px;"></div></a>
+							</div>
+						
+						<div class="swiper-slide " style="background-image:url(../../img/lisimg4.png);">
+							<a href="#middlePopover"><div style="width: 110px;height: 150px;"></div></a>
+						</div>
+						<div class="swiper-slide " style="background-image:url(../../img/lisimg5.png) ">
+							<a href="#middlePopover"><div style="width: 110px;height: 150px;"></div></a>
+						</div>
+						<div class="swiper-slide " style="background-image:url(../../img/lisimg6.png) ">
+						<a href="#middlePopover"><div style="width: 110px;height: 150px;"></div></a>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination "></div>
+				</div>
+
+				<!--运动标题部分-->
+				<div id="sport_name" class="mui-row">
+					<h4>运动名称</h4>
+					<div class="mui-collapse-content">
+						<p>运动时间|运动类型|运动名人</p>
+					</div>
+				</div>
+<!--海王-->
+	<div id="middlePopover" class="mui-popover" style="height: 420px;font-size: 12px;font-family: "宋体";">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					
+					<ul class="mui-table-view">
+					    <li class="mui-table-view-cell mui-media"style="height: 120px;">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="../../img/lisimg3.png" style="height: 100px;">					          
+					           <p class="haiwang">haiwang</p>
+					            <p class="haiwanga">haiwang</p>
+					             <p class="haiwanga"style="color: orange;font-size: 16px;">haiwang</p>
+					              <p class="haiwanga">haiwang</p>
+					              <p class="haiwanga">haiwang</p>					              		           
+					        </a>
+					    </li>					
+						</li>
+						<li class="mui-table-view-cell"style="height: 120px;" >
+    <a href="#"><div style=" word-wrap:break-word;word-break:break-all;white-space:normal;
+    "><!--div自动换行-->
+    	《海王》根据DC漫画改编，讲述了亚瑟·库里认识到他家族血脉的真谛的过程，以及和湄拉一同对抗对人类怀有更深敌意的同母异父的兄弟
+    　　海王是美国慈恩港灯塔看守人与海底之国亚特兰蒂斯女王所生、拥有半人类、半亚.....
+    </div></a>
+						</li>						
+					</li>					
+						<li class="mui-table-view-cell"style="height: 120px;">
+							<ul class="mui-table-view mui-grid-view"> 
+							    <li class="mui-table-view-cell mui-media mui-col-xs-3" style="margin-top: -10px;">							    
+							        <a href="#">
+							        	<p class="haiwangb">导演</p>
+							            <img class="mui-media-object" src="../images/muwu.jpg" style="width: 40px;height: 40px;">
+							            <div class="mui-media-body" id="haiwang"style="left:margin-left:-10px;">温子仁</div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media mui-col-xs-3"style="margin-top: -10px;">
+							        <a href="#">
+							        	<p class="haiwangb">主演</p>
+							           <img class="mui-media-object" src="../images/muwu.jpg" style="width: 40px;height: 40px;">
+							            <div class="mui-media-body" id="haiwang">文字说明1</div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media mui-col-xs-3"style="top: 5px;">
+							        <a href="#">
+							           <img class="mui-media-object" src="../images/muwu.jpg" style="width: 40px;height: 40px;">
+							            <div class="mui-media-body" id="haiwang">文字说明1</div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media mui-col-xs-3"style="top: 5px;">
+							        <a href="#">
+							           <img class="mui-media-object" src="../images/muwu.jpg" style="width: 40px;height: 40px;">
+							            <div class="mui-media-body" id="haiwang">文字说明1</div>
+							        </a>
+							    </li>
+							</ul>						
+						</li>
+						<li class="mui-table-view-cell"><a href="accordion.html" style="text-align: center;color: cornflowerblue;">查看更多电影资料</a>
+						</li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+				<!--项目列表-->
+				<div class="mui-slider">
+					<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<!--选择栏-->
+						<a class="mui-control-item" href="#20181214">12月14日</a>
+						<a class="mui-control-item" href="#item2">12月15日</a>
+						<a class="mui-control-item" href="#item3">12月16日</a>
+						<a class="mui-control-item" href="#item4" onclick="setInnerHTML()">12月17日</a>
+					</div>
+					<!--选择光标-->
+					<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+					<!--列表页-->
+					<div class="mui-slider-group">
+						<div id="20181214" class="mui-slider-item mui-control-content mui-active">
+							<ul class="mui-table-view">
+								<!--整个row-->
+								<li class="mui-table-view-cell">
+									<div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3 lesson_time">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3 lesson_coach">
+											<a href="#">
+												<h4>瑜伽课</h4>
+												
+											</a>
+										</div>
+										
+									</div>
+								</li>
+								<!--整个row-->
+								<li class="mui-table-view-cell">
+									<div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3" style="width: 40%;">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
+											<a href="#">
+												<h4>瑜伽课</h4>
+												
+											</a>
+										</div>
+										<!--按钮row-->
+										
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="item2" class="mui-slider-item mui-control-content">
+							<ul class="mui-table-view">
+								<!--整个row-->
+								<li class="mui-table-view-cell">
+									<div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3" style="width: 40%;">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
+											<a href="#">
+												<h4>现代舞</h4>
+												
+											</a>
+										</div>
+										<!--按钮row-->
+										
+									</div>
+								</li>
+								<!--整个row-->
+								<li class="mui-table-view-cell">
+									<div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3" style="width: 40%;">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
+											<a href="#">
+												<h4>肚皮舞</h4>
+												
+											</a>
+										</div>
+										<!--按钮row-->
+										
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="item3" class="mui-slider-item mui-control-content">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell"><div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3" style="width: 40%;">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
+											<a href="#">
+												<h4>肚皮舞</h4>
+												
+											</a>
+										</div>
+										<!--按钮row-->
+										
+									</div></li>
+								<li class="mui-table-view-cell"><div class="mui-row">
+										<!--时间row-->
+										<div class="mui-col-xl-3" style="width: 40%;">
+											<a href="#">
+												<h4>16:00</h4>
+												<div class="mui-collapse-content">
+													<h6>17:00结束</h6>
+												</div>
+											</a>
+										</div>
+										<!--教练row-->
+										<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
+											<a href="#">
+												<h4>肚皮舞</h4>
+												
+											</a>
+										</div>
+										<!--按钮row-->
+										
+									</div></li>
+							</ul>
+						</div>
+						<!--12.17-->
+						<div id="item4" class="mui-slider-item mui-control-content">
+							<ul class="mui-table-view">
+						
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!--课程推广-->
+				<div class="mui-content" style="height: 1000px;">
+					<ul class="mui-table-view" style="font-size: 14px;">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<img class="mui-media-object mui-pull-right" src="http://placehold.it/40x30" style="width: 20px;height: 20px;">
+								<span style="font-size: 14px;font-weight: bold;">超值套餐</span>
+								<span class="mui-pull-right" id="movetipe">要看大片也要吃大餐哦!</span>
+							</a>
+						</li>
+						<ul class="mui-table-view">
+							<li> <span id="moveeatp">超值套餐</span></li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30" id="movepicture">
+									<button type="button" class="mui-btn mui-pull-right" style="color: red;border: 1px solid red;height: 28px;">按钮</button>
+									<div class="mui-media-body" id="movetop">
+										和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？
+										<div style="margin-top:20px;">
+											<b style="color:lightseagreen;">￥17.9</b><del style="opacity: 0.5;margin-left: 8px;">￥25</del>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30" id="movepicture">
+									<button type="button" class="mui-btn mui-pull-right" style="color: red;border: 1px solid red;height: 28px;">按钮</button>
+									<div class="mui-media-body" id="movetop">
+										和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？
+										<div style="margin-top:20px;">
+											<b style="color:lightseagreen;">￥17.9</b><del style="opacity: 0.5;margin-left: 8px;">￥25</del>
+										</div>
+									</div>
+								</a>
+							</li>
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell mui-collapse">
+									<a class="mui-navigate-right" href="#" style="color:lightseagreen;text-align: center;">面板1</a>
+									<div class="mui-collapse-content">
+										<a href="javascript:;">
+											<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30" id="movepicture">
+											<button type="button" class="mui-btn mui-pull-right" style="color: red;border: 1px solid red;height: 28px;margin-top: 10%;">按钮</button>
+											<div class="mui-media-body" id="movetop">
+												和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？
+												<div style="margin-top:20px;">
+													<b style="color:lightseagreen;">￥17.9</b><del style="opacity: 0.5;margin-left: 8px;">￥25</del>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</ul>
+					</ul>
+					<!--双人餐-->
+					<ul class="mui-table-view" style="font-size: 14px;">
+						<ul class="mui-table-view">
+							<li> <span id="moveeatp">超值套餐</span></li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30" id="movepicture">
+									<button type="button" class="mui-btn mui-pull-right" style="color: red;border: 1px solid red;height: 28px;">按钮</button>
+									<div class="mui-media-body" id="movetop">
+										和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？
+										<div style="margin-top:20px;">
+											<b style="color:lightseagreen;">￥17.9</b><del style="opacity: 0.5;margin-left: 8px;">￥25</del>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30" id="movepicture">
+									<button type="button" class="mui-btn mui-pull-right" style="color: red;border: 1px solid red;height: 28px;">按钮</button>
+									<div class="mui-media-body" id="movetop">
+										和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？
+										<div style="margin-top:20px;">
+											<b style="color:lightseagreen;">￥17.9</b><del style="opacity: 0.5;margin-left: 8px;">￥25</del>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30" id="movepicture">
+									<button type="button" class="mui-btn mui-pull-right" style="color: red;border: 1px solid red;height: 28px;">按钮</button>
+									<div class="mui-media-body" id="movetop">
+										和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？
+										<div style="margin-top:20px;">
+											<b style="color:lightseagreen;">￥17.9</b><del style="opacity: 0.5;margin-left: 8px;">￥25</del>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</ul>
+					<!--多人餐-->
+					<ul class="mui-table-view" style="font-size: 14px;">
+						<ul class="mui-table-view">
+							<li> <span id="moveeatp">超值套餐</span></li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30" id="movepicture">
+									<button type="button" class="mui-btn mui-pull-right" style="color: red;border: 1px solid red;height: 28px;">按钮</button>
+									<div class="mui-media-body" id="movetop">
+										和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？
+										<div style="margin-top:20px;">
+											<b style="color:lightseagreen;">￥17.9</b><del style="opacity: 0.5;margin-left: 8px;">￥25</del>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</ul>
+				</div>
+
+				<!--底部栏-->
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item mui-active">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon mui-icon-phone"></span>
+						<span class="mui-tab-label">课程</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon mui-icon-email"></span>
+						<span class="mui-tab-label">教练</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon mui-icon-gear"></span>
+						<span class="mui-tab-label">个人</span>
+					</a>
+				</nav>
+
+
+				<!-- Swiper JS -->
+				<script src="../../js/swiper.min.js "></script>
+
+				<!-- Initialize Swiper -->
+				<script>
+					var swiper = new Swiper('.swiper-container', {
+						effect: 'coverflow',
+						grabCursor: true,
+						centeredSlides: true,
+						slidesPerView: 'auto',
+						coverflowEffect: {
+							rotate: 50,
+							stretch: 0,
+							depth: 100,
+							modifier: 1,
+							slideShadows: true,
+						},
+						pagination: {
+							el: '.swiper-pagination',
+						},
+					});
+				</script>
+
+		</body>
+
+</html>
