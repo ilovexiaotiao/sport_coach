@@ -42,7 +42,7 @@
                         </div>
                         <!--教练row-->
                         <div class="mui-col-xl-3 lesson_coach">
-                            <a href="#">
+                            <a href="{{url_for('teacher_desc')}}">
                                 <h4>{{i["type"]}}</h4>
                                 <div class="mui-collapse-content">
                                     <h6>{{i["teacher"]}}</h6>
@@ -51,7 +51,7 @@
                         </div>
                         <!--按钮row-->
                         <div class="mui-col-xl-3 lesson_detail">
-                            <button type="button" class="mui-btn mui-btn-yellow">详情</button>
+                            <button type="button" class="mui-btn mui-btn-yellow" onclick="window.location.href='{{url_for('lesson_detail')}}'">详情</button>
                         </div>
 
                     </div>

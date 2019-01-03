@@ -9,7 +9,7 @@ import json, os, datetime
 import collections
 
 app = Flask(__name__)
-path = "E:\sport_coach\static\json\lesson_list1.json"
+path = "E:\Nicholas Shan\sport_coach\static\json\lesson_list1.json"
 with open(path, "r") as f:
     # file = file.decode("utf-8-sig")
     data = json.load(f)
@@ -115,6 +115,7 @@ def store_map():
 @app.route('/store_desc')
 def store_desc():
     return render_template('store_desc.html')
+
 
 @app.route('/lesson_desc')
 def lesson_desc():
