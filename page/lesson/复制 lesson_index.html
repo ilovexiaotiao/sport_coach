@@ -9,7 +9,7 @@
 		<!--Swiper's CSS -->
 		<link rel="stylesheet" href="../../css/swiper.min.css">
 		<!--Custom CSS-->
-		<link rel="stylesheet" href="../../static/css/lesson_index.css" />
+		<link rel="stylesheet" href="../../lib/css/lesson_index.css" />
 	</head>
 
 	<body>
@@ -18,28 +18,35 @@
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
 			});
+			//MUI初始化完毕
 			mui.ready(function() {
+				//Scroll初始化
 				mui('.mui-scroll-wrapper').scroll({
 					bounce: true,
 					indicators: true,
 					deceleration: mui.os.ios ? 0.003 : 0.0009
 				});
-				mui('#segmentedControl').on('tap', '.mui-control-item:not(.mui-active)', function() {
+				//添加mui类监听器，捕捉tab的点击事件
+				mui('.mui-scroll').on('tap', '.mui-control-item:not(.mui-active)', function() {
 					mui('.mui-slider').slider().gotoItem(this.getAttribute('data-index'));
 				});
+				mui('.mui-scroll-wrapper').scroll();
 			});
 		</script>
 
-		<!--首栏部分-->
+		<!--首栏标题部分-->
 		<header id="header" class="mui-bar mui-bar-transparent">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title" style="color: black;">测试页面</h1>
+
+			<h1 class="mui-title">金港健身会所<span class="mui-icon mui-icon-arrowdown" style="font-size: 14px;"></span></h1>
+
 		</header>
 
 		<!--主体部分-->
 		<div class="mui-content">
+
 			<!--置顶图片部分-->
-			<div class="mui-row">
+			<div class="mui-row" style="width: 100%;">
 				<img id="top-pic" src="../../static/img/健美操.jpg" /></img>
 			</div>
 
@@ -49,314 +56,179 @@
 			</div>
 			-->
 
-			<!--搜索类别选项卡-->
-			<div style="padding: 10px 10px;">
-				<div id="segmentedControl" class="mui-scroll-wrapper mui-segmented-control mui-segmented-control-inverted">
-					<a class="mui-control-item mui-active" href="#item1">功能1</a>
-					<a class="mui-control-item" href="#item2">功能2</a>
-					<a class="mui-control-item" href="#item3">功能3</a>
-				</div>
-			</div>
-
-			<!--功能1部分-->
-			<div id="item1" class="mui-slider-item mui-control-content">
-				<div class="mui-scroll-wrapper">
+			<!--主题组件-->
+			<div class="mui-row mui-slider">
+				<!--课程大类-->
+				<div id="lesson_first" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 					<div class="mui-scroll">
-						<div class="swiper-container mui-row ">
-							<div class="swiper-wrapper ">
-								<div id="tab-item1" class="swiper-slide " style="background-image:url(../../img/lisimg3.png) "></div>
-								<div id="tab-item2" class="swiper-slide " style="background-image:url(../../img/lisimg4.png) "></div>
-								<div id="tab-item3" class="swiper-slide " style="background-image:url(../../img/lisimg5.png) "></div>
-								<div id="tab-item4" class="swiper-slide " style="background-image:url(../../img/lisimg6.png) "></div>
-							</div>
-							<!-- Add Pagination -->
-							<div class="swiper-pagination "></div>
-						</div>
+						<a class="mui-control-item mui-active" data-index="0">
+							推荐
+						</a>
+						<a class="mui-control-item" data-index="1">
+							健美
+						</a>
+						<a class="mui-control-item" data-index="2">
+							瑜伽
+						</a>
+						<a class="mui-control-item" data-index="3">
+							舞蹈
+						</a>
+						<a class="mui-control-item" data-index="4">
+							动感单车
+						</a>
+						<a class="mui-control-item" data-index="5">
+							其他
+						</a>
+					</div>
+				</div>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-collapse">
+				        <a class="" href="#">
+				        	<div class="film_tmpl">
 
-						<!--标题部分-->
-						<div id="sport-name" class="mui-row">
-							<h4>运动名称</h4>
-							<div id="sport-desc" class="mui-collapse-content">
-								<p>运动时间|运动类型|运动名人</p>
+								<div class="film_tmpl_t mui-row">
+									<div class="film_tmpl_t_l">
+										<img src="../../static/img/健身套餐.jpg" />
+									</div>
+									<div class="film_tmpl_t_r">
+										<h2><span>燃脂收腹操</span></h2>
+										<h5>收腹</h5>
+										<h5>瘦腿</h5>
+										<p>最近场次: <span>19:00</span> 
+										</p>
+										<p>教练: <span>阿威</span> 
+										</p>
+										<p><button>详情</button></p>
+									</div>
+									<div style="clear:both;"></div>
+								</div>
 							</div>
-						</div>
+				        	</a>
+				        <div class="mui-collapse-content ">
+				            <p>面板1子内容</p>
+				        </div>
+				    </li>
+				    
+				</ul>
+				<div class="mui-slider-group">
+					<!--第一个内容区容器-->
+					<div class="mui-slider-item ">
+						<div class="film_list">
+							<div class="film_tmpl">
 
-						<!--项目列表-->
-						<div class="mui-slider">
-							<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-								<!--选择栏-->
-								<a id='gotoitem1' class="mui-control-item" href="#20181214">12月14日</a>
-								<a id='gotoitem2' class="mui-control-item" href="#20181215">12月15日</a>
-								<a id='gotoitem3' class="mui-control-item" href="#item3">12月16日</a>
-								<a id='gotoitem4' class="mui-control-item" href="#item4">12月17日</a>
+								<div class="film_tmpl_t mui-row">
+									<div class="film_tmpl_t_l">
+										<img src="../../static/img/健身套餐.jpg" />
+									</div>
+									<div class="film_tmpl_t_r">
+										<h2><span>燃脂收腹操</span></h2>
+										<h5>收腹</h5>
+										<h5>瘦腿</h5>
+										<p>最近场次: <span>19:00</span> 
+										</p>
+										<p>教练: <span>阿威</span> 
+										</p>
+										<p><button>详情</button></p>
+									</div>
+									<div style="clear:both;"></div>
+								</div>
 							</div>
-							<!--选择光标-->
-							<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
-							<!--列表页-->
-							<div class="mui-slider-group">
-								<div id="20181214" class="mui-slider-item mui-control-content mui-active">
-									<ul class="mui-table-view">
-										<!--整个row-->
-										<li class="mui-table-view-cell">
-											<div class="mui-row">
-												<!--时间row-->
-												<div class="mui-col-xl-3 lesson_time">
-													<a href="#">
-														<h4>16:00</h4>
-														<div class="mui-collapse-content">
-															<h6>17:00结束</h6>
-														</div>
-													</a>
-												</div>
-												<!--教练row-->
-												<div class="mui-col-xl-3 lesson_coach">
-													<a href="#">
-														<h4>高中华</h4>
-														<div class="mui-collapse-content">
-															<h6>瑜伽老师</h6>
-														</div>
-													</a>
-												</div>
-												<!--按钮row-->
-												<div class="mui-col-xl-3 lesson_detail">
-													<button type="button" class="mui-btn mui-btn-yellow">详情</button>
-												</div>
-											</div>
-										</li>
-										<!--整个row-->
-										<li class="mui-table-view-cell">
-											<div class="mui-row">
-												<!--时间row-->
-												<div class="mui-col-xl-3" style="width: 40%;">
-													<a href="#">
-														<h4>16:00</h4>
-														<div class="mui-collapse-content">
-															<h6>17:00结束</h6>
-														</div>
-													</a>
-												</div>
-												<!--教练row-->
-												<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
-													<a href="#">
-														<h4>高中华</h4>
-														<div class="mui-collapse-content">
-															<h6>瑜伽老师</h6>
-														</div>
-													</a>
-												</div>
-												<!--按钮row-->
-												<div class="mui-col-xl-3" style="width:25%;text-align: right;">
-													<button type="button" class="mui-btn mui-btn-yellow">详情</button>
-												</div>
-											</div>
-										</li>
-									</ul>
+							<div class="film_tmpl">
+
+								<div class="film_tmpl_t">
+									<div class="film_tmpl_t_l">
+										<img src="http://img3.doubanio.com/view/movie_poster_cover/mpst/public/p2292976849.jpg" />
+									</div>
+									<div class="film_tmpl_t_r">
+										<h2><span>老炮儿</span><span class="want"><span>155466</span>人观看</span><span class="ddd">IMAX 3D</span></h2>
+										<h5>大陆待映</h5>
+										<p>冒险,科幻,奇幻</p>
+										<p>主演: <span>妮可基德曼,汤姆科鲁兹</span> <button>想看</button></p>
+									</div>
+									<div style="clear:both;"></div>
 								</div>
-								<div id="20181215" class="mui-slider-item mui-control-content">
-									<ul class="mui-table-view">
-										<!--整个row-->
-										<li class="mui-table-view-cell">
-											<div class="mui-row">
-												<!--时间row-->
-												<div class="mui-col-xl-3" style="width: 40%;">
-													<a href="#">
-														<h4>16:00</h4>
-														<div class="mui-collapse-content">
-															<h6>17:00结束</h6>
-														</div>
-													</a>
-												</div>
-												<!--教练row-->
-												<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
-													<a href="#">
-														<h4>张中华</h4>
-														<div class="mui-collapse-content">
-															<h6>现代舞老师</h6>
-														</div>
-													</a>
-												</div>
-												<!--按钮row-->
-												<div class="mui-col-xl-3" style="width:25%;text-align: right;">
-													<button type="button" class="mui-btn mui-btn-yellow">详情</button>
-												</div>
-											</div>
-										</li>
-										<!--整个row-->
-										<li class="mui-table-view-cell">
-											<div class="mui-row">
-												<!--时间row-->
-												<div class="mui-col-xl-3" style="width: 40%;">
-													<a href="#">
-														<h4>16:00</h4>
-														<div class="mui-collapse-content">
-															<h6>17:00结束</h6>
-														</div>
-													</a>
-												</div>
-												<!--教练row-->
-												<div class="mui-col-xl-3" style="width: 30%;text-align: right;">
-													<a href="#">
-														<h4>张中华</h4>
-														<div class="mui-collapse-content">
-															<h6>现代舞老师</h6>
-														</div>
-													</a>
-												</div>
-												<!--按钮row-->
-												<div class="mui-col-xl-3" style="width:25%;text-align: right;">
-													<button type="button" class="mui-btn mui-btn-yellow">详情</button>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div id="item3" class="mui-slider-item mui-control-content">
-									<ul class="mui-table-view">
-										<li class="mui-table-view-cell">第2个选项卡子项</li>
-										<li class="mui-table-view-cell">第2个选项卡子项</li>
-									</ul>
-								</div>
-								<div id="item4" class="mui-slider-item mui-control-content">
-									<ul class="mui-table-view">
-										<li class="mui-table-view-cell">第2个选项卡子项</li>
-										<li class="mui-table-view-cell">第2个选项卡子项</li>
-									</ul>
+							</div>
+							<div class="film_tmpl">
+
+								<div class="film_tmpl_t">
+									<div class="film_tmpl_t_l">
+										<img src="http://img3.doubanio.com/view/movie_poster_cover/mpst/public/p2292976849.jpg" />
+									</div>
+									<div class="film_tmpl_t_r">
+										<h2><span>老炮儿</span><span class="want"><span>155466</span>人观看</span><span class="ddd">IMAX 3D</span></h2>
+										<h5>大陆待映</h5>
+										<p>冒险,科幻,奇幻</p>
+										<p>主演: <span>妮可基德曼,汤姆科鲁兹</span> <button>想看</button></p>
+									</div>
+									<div style="clear:both;"></div>
 								</div>
 							</div>
 						</div>
-
+					</div>
+					<!--第二个内容区-->
+					<div class="mui-slider-item">
+						<!-- 具体内容 -->
+					</div>
+					<!--第三个内容区容器-->
+					<div class="mui-slider-item">
+						<!-- 具体内容 -->
+					</div>
+					<!--第四个内容区容器-->
+					<div class="mui-slider-item">
+						<!-- 具体内容 -->
+					</div>
+					<!--第五个内容区容器-->
+					<div class="mui-slider-item">
+						<!-- 具体内容 -->
 					</div>
 				</div>
 			</div>
 
-			<div id="item2" class="mui-control-content mui-scroll-wrapper">
-				<ul class="mui-table-view">
-					<li class="mui-table-view-cell">
-						第二个选项卡子项-1
-					</li>
-					<li class="mui-table-view-cell">
-						第二个选项卡子项-2
-					</li>
-					<li class="mui-table-view-cell">
-						第二个选项卡子项-3
-					</li>
-				</ul>
-			</div>
-			<div id="item3" class="mui-control-content mui-scroll-wrapper">
-				<ul class="mui-table-view">
-					<li class="mui-table-view-cell">
-						第三个选项卡子项-1
-					</li>
-					<li class="mui-table-view-cell">
-						第三个选项卡子项-2
-					</li>
-					<li class="mui-table-view-cell">
-						第三个选项卡子项-3
-					</li>
-				</ul>
-			</div>
+			<!--课程小类-->
 
-			<!--课程推广-->
-			<div id="lesson_ad" class="mui-row">
-				<ul class="mui-table-view">
-					<li class="mui-table-view-cell">
-						<h4 class="mui-navigate-right" href="#">推广</h4>
+			<!-- Swiper JS -->
+			<script src="../../js/swiper.min.js "></script>
 
-					</li>
-				</ul>
+			<!-- Initialize Swiper -->
+			<script>
+				var swiper = new Swiper('.swiper-container', {
+					effect: 'coverflow',
+					grabCursor: true,
+					centeredSlides: true,
+					slidesPerView: 'auto',
 
-				<ul class="mui-table-view">
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="../../img/lisimg6.png">
-							<div class="mui-media-body">
-								幸福
-								<p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
-							</div>
-						</a>
-					</li>
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="../../img/lisimg5.png">
-							<div class="mui-media-body">
-								木屋
-								<p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
-							</div>
-						</a>
-					</li>
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="../../img/lisimg3.png">
-							<div class="mui-media-body">
-								CBD
-								<p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
-							</div>
-						</a>
-					</li>
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="../../img/lisimg4.png">
-							<div class="mui-media-body">
-								CBD
-								<p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
-							</div>
-						</a>
-					</li>
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="../../img/lisimg5.png">
-							<div class="mui-media-body">
-								CBD
-								<p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
-							</div>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- Swiper JS -->
-		<script src="../../js/swiper.min.js "></script>
+					coverflowEffect: {
+						rotate: 50,
+						stretch: 0,
+						depth: 100,
+						modifier: 1,
+						slideShadows: true
+					},
+					//调用Swiper过渡函数，在滑动结束后选定元素	
+					//				on: {
+					//					transitionEnd: function() {
+					//						var index = "gotoitem" + (this.activeIndex + 1)
+					//						var swipertriger = document.getElementById(index);
+					//						//alert(swipertriger.id)
+					//						mui.trigger(swipertriger, 'touchstart');
+					//						mui.trigger(swipertriger, 'tap');
+					//						mui('#row-list').refresh();
+					//						mui().refresh(true)
+					//						//alert("OK")
+					//						var current = document.querySelector(".mui-slider-item .mui-control-content .mui-active");
+					//						// 						    alert(current);
+					//						// 						    if(swipertriger !== current) {
+					//						//              				current.classList.remove('mui-active');
+					//						//              				swipertriger.classList.add('mui-active');
+					//					}
+					//				},
 
-		<!-- Initialize Swiper -->
-		<script>
-			var swiper = new Swiper('.swiper-container', {
-				effect: 'coverflow',
-				grabCursor: true,
-				centeredSlides: true,
-				slidesPerView: 'auto',
-
-				coverflowEffect: {
-					rotate: 50,
-					stretch: 0,
-					depth: 100,
-					modifier: 1,
-					slideShadows: true
-				},
-				//调用Swiper过渡函数，在滑动结束后选定元素	
-				//				on: {
-				//					transitionEnd: function() {
-				//						var index = "gotoitem" + (this.activeIndex + 1)
-				//						var swipertriger = document.getElementById(index);
-				//						//alert(swipertriger.id)
-				//						mui.trigger(swipertriger, 'touchstart');
-				//						mui.trigger(swipertriger, 'tap');
-				//						mui('#row-list').refresh();
-				//						mui().refresh(true)
-				//						//alert("OK")
-				//						var current = document.querySelector(".mui-slider-item .mui-control-content .mui-active");
-				//						// 						    alert(current);
-				//						// 						    if(swipertriger !== current) {
-				//						//              				current.classList.remove('mui-active');
-				//						//              				swipertriger.classList.add('mui-active');
-				//					}
-				//				},
-
-				pagination: {
-					el: '.swiper-pagination',
-				},
-				//						
-			});
-		</script>
+					pagination: {
+						el: '.swiper-pagination',
+					},
+					//						
+				});
+			</script>
 
 	</body>
 
