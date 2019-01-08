@@ -6,6 +6,8 @@
 		<title>课程首页</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../lib/css/mui.picker.min.css" rel="stylesheet" />
+		<script src="../../static/js/jquery.min.js"></script>
 		<!--Swiper's CSS -->
 		<link rel="stylesheet" href="../../css/swiper.min.css">
 		<!--Custom CSS-->
@@ -14,6 +16,7 @@
 
 	<body>
 		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/mui.picker.min.js"></script>
 		<script type="text/javascript">
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
@@ -37,9 +40,11 @@
 		<!--首栏标题部分-->
 		<header id="header" class="mui-bar mui-bar-transparent">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-
-			<h1 class="mui-title">金港健身会所<span class="mui-icon mui-icon-arrowdown" style="font-size: 14px;"></span></h1>
-
+			<h1 id="titlename" class="mui-title">金港健身会所<span class="mui-icon mui-icon-arrowdown" style="font-size: 14px;"></span></h1>
+			<h4 id='titledate' data-options='{"type":"date","beginYear":2018,"endYear":2018}' class="mui-pull-right" style="margin: 10px auto;">
+			日期</h4>
+			<!--<button id='demo2' data-options='{"type":"date","beginYear":2014,"endYear":2016}' class="btn mui-btn mui-btn-block">选择日期 ...</button>-->
+			<!--<div id='userResult' class="ui-alert"></div>-->
 		</header>
 
 		<!--主体部分-->
@@ -76,46 +81,13 @@
 						<a class="mui-control-item" data-index="4">
 							动感单车
 						</a>
-						<a class="mui-control-item" data-index="5">
-							其他
-						</a>
 					</div>
 				</div>
-				<ul class="mui-table-view">
-				    <li class="mui-table-view-cell mui-collapse">
-				        <a class="" href="#">
-				        	<div class="film_tmpl">
-
-								<div class="film_tmpl_t mui-row">
-									<div class="film_tmpl_t_l">
-										<img src="../../static/img/健身套餐.jpg" />
-									</div>
-									<div class="film_tmpl_t_r">
-										<h2><span>燃脂收腹操</span></h2>
-										<h5>收腹</h5>
-										<h5>瘦腿</h5>
-										<p>最近场次: <span>19:00</span> 
-										</p>
-										<p>教练: <span>阿威</span> 
-										</p>
-										<p><button>详情</button></p>
-									</div>
-									<div style="clear:both;"></div>
-								</div>
-							</div>
-				        	</a>
-				        <div class="mui-collapse-content ">
-				            <p>面板1子内容</p>
-				        </div>
-				    </li>
-				    
-				</ul>
 				<div class="mui-slider-group">
 					<!--第一个内容区容器-->
 					<div class="mui-slider-item ">
 						<div class="film_list">
 							<div class="film_tmpl">
-
 								<div class="film_tmpl_t mui-row">
 									<div class="film_tmpl_t_l">
 										<img src="../../static/img/健身套餐.jpg" />
@@ -124,41 +96,65 @@
 										<h2><span>燃脂收腹操</span></h2>
 										<h5>收腹</h5>
 										<h5>瘦腿</h5>
-										<p>最近场次: <span>19:00</span> 
+										<p>最近场次: <span>19:00</span>
 										</p>
-										<p>教练: <span>阿威</span> 
+										<p>教练: <span>阿威</span>
 										</p>
-										<p><button>详情</button></p>
+										<p><button>课表<span class="mui-icon mui-icon-arrowdown" style="font-size: 14px;"></span></button></p>
 									</div>
 									<div style="clear:both;"></div>
 								</div>
 							</div>
 							<div class="film_tmpl">
-
-								<div class="film_tmpl_t">
+								<div class="film_tmpl_t mui-row">
 									<div class="film_tmpl_t_l">
-										<img src="http://img3.doubanio.com/view/movie_poster_cover/mpst/public/p2292976849.jpg" />
+										<img src="../../static/img/健身套餐.jpg" />
 									</div>
 									<div class="film_tmpl_t_r">
-										<h2><span>老炮儿</span><span class="want"><span>155466</span>人观看</span><span class="ddd">IMAX 3D</span></h2>
-										<h5>大陆待映</h5>
-										<p>冒险,科幻,奇幻</p>
-										<p>主演: <span>妮可基德曼,汤姆科鲁兹</span> <button>想看</button></p>
+										<h2><span>燃脂收腹操</span></h2>
+										<h5>收腹</h5>
+										<h5>瘦腿</h5>
+										<p>最近场次: <span>19:00</span>
+										</p>
+										<p>教练: <span>阿威</span>
+										</p>
+										<p><button>课表<span class="mui-icon mui-icon-arrowdown" style="font-size: 14px;"></span></button></p>
 									</div>
 									<div style="clear:both;"></div>
 								</div>
 							</div>
 							<div class="film_tmpl">
-
-								<div class="film_tmpl_t">
+								<div class="film_tmpl_t mui-row">
 									<div class="film_tmpl_t_l">
-										<img src="http://img3.doubanio.com/view/movie_poster_cover/mpst/public/p2292976849.jpg" />
+										<img src="../../static/img/健身套餐.jpg" />
 									</div>
 									<div class="film_tmpl_t_r">
-										<h2><span>老炮儿</span><span class="want"><span>155466</span>人观看</span><span class="ddd">IMAX 3D</span></h2>
-										<h5>大陆待映</h5>
-										<p>冒险,科幻,奇幻</p>
-										<p>主演: <span>妮可基德曼,汤姆科鲁兹</span> <button>想看</button></p>
+										<h2><span>燃脂收腹操</span></h2>
+										<h5>收腹</h5>
+										<h5>瘦腿</h5>
+										<p>最近场次: <span>19:00</span>
+										</p>
+										<p>教练: <span>阿威</span>
+										</p>
+										<p><button>课表<span class="mui-icon mui-icon-arrowdown" style="font-size: 14px;"></span></button></p>
+									</div>
+									<div style="clear:both;"></div>
+								</div>
+							</div>
+							<div class="film_tmpl">
+								<div class="film_tmpl_t mui-row">
+									<div class="film_tmpl_t_l">
+										<img src="../../static/img/健身套餐.jpg" />
+									</div>
+									<div class="film_tmpl_t_r">
+										<h2><span>燃脂收腹操</span></h2>
+										<h5>收腹</h5>
+										<h5>瘦腿</h5>
+										<p>最近场次: <span>19:00</span>
+										</p>
+										<p>教练: <span>阿威</span>
+										</p>
+										<p><button>课表<span class="mui-icon mui-icon-arrowdown" style="font-size: 14px;"></span></button></p>
 									</div>
 									<div style="clear:both;"></div>
 								</div>
@@ -167,19 +163,106 @@
 					</div>
 					<!--第二个内容区-->
 					<div class="mui-slider-item">
-						<!-- 具体内容 -->
+						<div class="mui-slider-item ">
+							<div class="film_list">
+								<div class="film_tmpl">
+									<div class="film_tmpl_t mui-row">
+										<div class="film_tmpl_t_l">
+											<img src="../../static/img/健身套餐.jpg" />
+										</div>
+										<div class="film_tmpl_t_r">
+											<h2><span>燃脂收腹操</span></h2>
+											<h5>收腹</h5>
+											<h5>瘦腿</h5>
+											<p>最近场次: <span>19:00</span>
+											</p>
+											<p>教练: <span>阿威</span>
+											</p>
+											<p><button>详情</button></p>
+										</div>
+										<div style="clear:both;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!--第三个内容区容器-->
 					<div class="mui-slider-item">
-						<!-- 具体内容 -->
+						<div class="mui-slider-item ">
+							<div class="film_list">
+								<div class="film_tmpl">
+
+									<div class="film_tmpl_t mui-row">
+										<div class="film_tmpl_t_l">
+											<img src="../../static/img/健身套餐.jpg" />
+										</div>
+										<div class="film_tmpl_t_r">
+											<h2><span>燃脂收腹操</span></h2>
+											<h5>收腹</h5>
+											<h5>瘦腿</h5>
+											<p>最近场次: <span>19:00</span>
+											</p>
+											<p>教练: <span>阿威</span>
+											</p>
+											<p><button>详情</button></p>
+										</div>
+										<div style="clear:both;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!--第四个内容区容器-->
 					<div class="mui-slider-item">
-						<!-- 具体内容 -->
+						<div class="mui-slider-item ">
+							<div class="film_list">
+								<div class="film_tmpl">
+
+									<div class="film_tmpl_t mui-row">
+										<div class="film_tmpl_t_l">
+											<img src="../../static/img/健身套餐.jpg" />
+										</div>
+										<div class="film_tmpl_t_r">
+											<h2><span>燃脂收腹操</span></h2>
+											<h5>收腹</h5>
+											<h5>瘦腿</h5>
+											<p>最近场次: <span>19:00</span>
+											</p>
+											<p>教练: <span>阿威</span>
+											</p>
+											<p><button>详情</button></p>
+										</div>
+										<div style="clear:both;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!--第五个内容区容器-->
 					<div class="mui-slider-item">
-						<!-- 具体内容 -->
+						<div class="mui-slider-item ">
+							<div class="film_list">
+								<div class="film_tmpl">
+
+									<div class="film_tmpl_t mui-row">
+										<div class="film_tmpl_t_l">
+											<img src="../../static/img/健身套餐.jpg" />
+										</div>
+										<div class="film_tmpl_t_r">
+											<h2><span>燃脂收腹操</span></h2>
+											<h5>收腹</h5>
+											<h5>瘦腿</h5>
+											<p>最近场次: <span>19:00</span>
+											</p>
+											<p>教练: <span>阿威</span>
+											</p>
+											<p><button>详情</button></p>
+										</div>
+										<div style="clear:both;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -230,6 +313,98 @@
 				});
 			</script>
 
+			<!--点名级联菜单-->
+			<script>
+				(function($, doc) {
+					$.init();
+					$.ready(function() {
+						/**
+						 * 获取对象属性的值
+						 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+						 * @param {Object} obj 对象
+						 * @param {String} param 属性名
+						 */
+						var _getParam = function(obj, param) {
+							return obj[param] || '';
+						};
+						//普通示例
+						var userPicker = new $.PopPicker();
+						userPicker.setData([{
+							value: 'ywj',
+							text: '金港健身会所'
+						}, {
+							value: 'aaa',
+							text: '银港健身会所'
+						}, {
+							value: 'gezh',
+							text: '金港二店'
+						}]);
+						var showUserPickerButton = doc.getElementById('titlename');
+						var userResult = doc.getElementById('titlename');
+						showUserPickerButton.addEventListener('tap', function(event) {
+							userPicker.show(function(items) {
+								userResult.innerText = JSON.stringify(items[0].text);
+								//返回 false 可以阻止选择框的关闭
+								//return false;
+							});
+						}, false);
+
+					});
+				})(mui, document);
+			</script>
+
+			<!--时间选择器-->
+			<script>
+				(function($) {
+						$.init();
+						var result = $('#titledate')[0];
+						result.addEventListener('tap', function() {
+							var _self = this;
+							if(_self.picker) {
+								_self.picker.show(function(rs) {
+									result.innerText = rs.m.text+"月"+rs.d.text+"日";
+									_self.picker.dispose();
+									_self.picker = null;
+								});
+							} else {
+								var optionsJson = this.getAttribute('data-options') || '{}';
+								var options = JSON.parse(optionsJson);
+								var id = this.getAttribute('id');
+								/*
+								 * 首次显示时实例化组件
+								 * 示例为了简洁，将 options 放在了按钮的 dom 上
+								 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+								 */
+								_self.picker = new $.DtPicker(options);
+								_self.picker.show(function(rs) {
+									/*
+									 * rs.value 拼合后的 value
+									 * rs.text 拼合后的 text
+									 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+									 * rs.m 月，用法同年
+									 * rs.d 日，用法同年
+									 * rs.h 时，用法同年
+									 * rs.i 分（minutes 的第二个字母），用法同年
+									 */
+									result.innerText = rs.m.text+"月"+rs.d.text+"日";
+									/* 
+									 * 返回 false 可以阻止选择框的关闭
+									 * return false;
+									 */ 
+									/*
+									 * 释放组件资源，释放后将将不能再操作组件
+									 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+									 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+									 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+									 */
+									_self.picker.dispose();
+									_self.picker = null;
+								});
+							}
+						}, false);
+					
+				})(mui);
+			</script>
 	</body>
 
 </html>
