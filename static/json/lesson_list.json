@@ -1,749 +1,386 @@
 ﻿{
-	"0": {
-		"name": "健身",
-		"desc": "健身操|健美操|塑形减肥",
-		"arrange": {
-			"MON": [{
-					"date": "12月14日",
-					"start": "08:40",
-					"end": "09:40",
-					"teacher": "凯伦",
-					"type": "燃脂腰腹",
-					"floor": "4F",
-					"url": ""
-				}, {
-					"start": "09:00",
-					"end": "09:45",
-					"teacher": "大成",
-					"type": "健美操",
-					"floor": "3F",
-					"url": ""
-
-				},
-				{
-					"start": "17:10",
-					"end": "18:10",
-					"teacher": "张荣",
-					"type": "健美操",
-					"floor": "3F",
-					"url": ""
-				}, {
-					"date": "12月14日",
-					"start": "19:20",
-					"end": "20:20",
-					"teacher": "李兰兰",
-					"type": "综合操",
-					"url": "",
-					"floor": "3F"
-				}
-			],
-			"Tue": [{
-					"date": "12月15日",
-					"start": "14:30",
-					"end": "15:30",
-					"teacher": "刘艳兰",
-					"type": "韩国操",
-					"floor": "3F",
-					"url": ""
-				}, {
-					"date": "12月15日",
-					"start": "16:00",
-					"end": "17:00",
-					"teacher": "King",
-					"type": "健身操",
-					"floor": "3F",
-					"url": ""
-
-				},
-				{
-					"date": "12月15日",
-					"start": "20:30",
-					"end": "21:30",
-					"teacher": "陈辉",
-					"type": "搏击操",
-					"floor": "3F",
-					"url": ""
-				}
-			],
-			"Wes": [{
-					"date": "12月16日",
-					"start": "08:40",
-					"end": "09:40",
-					"teacher": "凯伦",
-					"type": "燃脂腰腹",
-					"floor": "4F",
-					"url": ""
-				}, {
-					"date": "12月16日",
-					"start": "16:00",
-					"end": "17:00",
-					"teacher": "庄雅妹",
-					"type": "健美操",
-					"floor": "3F",
-					"url": ""
-				},
-				{
-					"date": "12月16日",
-					"start": "19:20",
-					"end": "20:20",
-					"teacher": "卢俊伟",
-					"type": "健美操",
-					"floor": "3F",
-					"url": ""
-				}
-			],
-			"Thur": [{
-					"date": "12月17日",
-					"start": "14:30",
-					"end": "15:30",
-					"teacher": "张荣",
-					"type": "健美操",
-					"floor": "3F",
-					"url": ""
-				},
-				{
-					"date": "12月17日",
-					"start": "20:30",
-					"end": "21:30",
-					"teacher": "芝芝",
-					"type": "健美操",
-					"floor": "3F",
-					"url": ""
-				}, {
-					"date": "12月17日",
-					"start": "17:10",
-					"end": "18:10",
-					"teacher": "大成",
-					"type": "搏击操",
-					"floor": "3F",
-					"url": ""
-				}
-			],
-			"Fri": [{
-					"date": "12月18日",
-					"start": "14:00",
-					"end": "15:00",
-					"teacher": "王欢",
-					"type": "健美操",
-					"floor": "3F",
-					"url": ""
-				}, {
-					"date": "12月18日",
-					"start": "14:00",
-					"end": "15:00",
-					"teacher": "小敏",
-					"type": "健美操",
-					"floor": "3F",
-					"url": ""
-				},
-				{
-					"date": "12月18日",
-					"start": "09:00",
-					"end": "10:00",
-					"teacher": "凯伦",
-					"type": "健身指导老师",
-					"url": "",
-					"floor": "3F"
-
-				}, {
-					"date": "12月18日",
-					"start": "17:10",
-					"end": "18:10",
-					"teacher": "啊泽",
-					"type": "健身指导老师",
-					"url": "",
-					"floor": "3F"
-
-				}
-			],
-			"Sat": [{
-					"date": "12月19日",
-					"start": "17:10",
-					"end": "18:10",
-					"teacher": "吉米",
-					"type": "塑形指导老师",
-					"url": "",
-					"floor": "3F"
-				}, {
-					"date": "12月19日",
-					"start": "19:20",
-					"end": "20:20",
-					"teacher": "李兰兰",
-					"type": "减健身指导老师",
-					"floor": "3F",
-					"url": ""
-
-				},
-				{
-					"date": "12月19日",
-					"start": "14:00",
-					"end": "15:00",
-					"teacher": "凯伦",
-					"type": "核心腰腹指导老师",
-					"url": "",
-					"floor": "3F"
-
-				}
-			],
-			"Sun": [{
-					"date": "12月20日",
-					"start": "20:30",
-					"end": "21:30",
-					"teacher": "钟奎",
-					"type": "塑形指导老师",
-					"url": "",
-					"floor": "3F"
-				}, {
-					"date": "12月20日",
-					"start": "17:10",
-					"end": "18:10",
-					"teacher": "大成",
-					"type": "减健身指导老师",
-					"url": "",
-					"floor": "3F"
-
-				},
-				{
-					"date": "12月20日",
-					"start": "16:00",
-					"end": "17:00",
-					"teacher": "啊泉",
-					"type": "健身指导老师",
-					"url": "",
-					"floor": "3F"
-
-				}
-			]
-
-		}
+	"Id": "409b846e-7111-4799-9a38-324faa0633de",
+	"IsBlock": false,
+	"IsValid": true,
+	"DataEnable": true,
+	"CreatorName": "系统管理员",
+	"ModifyByName": "系统管理员",
+	"CreatorPosition": "业务管理员",
+	"Title": {
+		"Value": "动感单车",
+		"R": true,
+		"U": true
 	},
-	"1": {
-		"name": "瑜伽",
-		"desc": "高温瑜伽|哈他瑜伽|瘦身瑜伽",
-		"arrange": {
-			"20181214": [{
-					"date": "12月14日",
-					"start": "10:00",
-					"end": "11:00",
-					"teacher": "潘丽",
-					"type": "哈他瑜伽",
-					"url": "",
-					"floor": "4F"
-				}, {
-					"date": "12月14日",
-					"start": "10:10",
-					"end": "11:10",
-					"teacher": "李婷婷",
-					"type": "纤体瑜伽",
-					"floor": "3F",
-					"url": ""
-				}, {
-					"date": "12月14日",
-					"start": "12:50",
-					"end": "13:50",
-					"teacher": "伍倩",
-					"type": "空中瑜伽",
-					"floor": "4F",
-					"url": ""
-				}, {
-					"date": "12月14日",
-					"start": "16:00",
-					"end": "17:00",
-					"teacher": "张广英",
-					"type": "高温瑜伽",
-					"floor": "4F",
-					"url": ""
-				},
-				{
-					"date": "12月14日",
-					"start": "20:10",
-					"end": "21:10",
-					"teacher": "陈健",
-					"type": "形体瑜伽",
-					"floor": "4F",
-					"url": ""
-				}
-
-			],
-			"Tue": [{
-				"date": "12月15日",
-				"start": "10:10",
-				"end": "11:10",
-				"teacher": "李婷婷",
-				"type": "阴瑜伽",
-				"url": "",
-				"floor": "3F"
-			}, {
-				"date": "12月15日",
-				"start": "20:10",
-				"end": "21:10",
-				"teacher": "方影",
-				"type": "经络瑜伽",
-				"url": "",
-				"floor": "4F"
-
-			}],
-			"Wes": [{
-				"date": "12月16日",
-				"start": "12:50",
-				"end": "13:50",
-				"teacher": "艾米",
-				"type": "空中瑜伽",
-				"url": "",
-				"floor": "4F"
-			}, {
-				"date": "12月16日",
-				"start": "20:10",
-				"end": "21:10",
-				"teacher": "吴丽娜",
-				"type": "高温瑜伽",
-				"url": "",
-				"floor": "4F"
-
-			}, {
-				"date": "12月16日",
-				"start": "10:00",
-				"end": "11:00",
-				"teacher": "婷子",
-				"type": "塑形瑜伽",
-				"floor": "4F",
-				"url": ""
-			}],
-			"Thur": [{
-				"date": "12月17日",
-				"start": "10:00",
-				"end": "11:00",
-				"teacher": "潘丽",
-				"type": "哈他瑜伽",
-				"url": "",
-				"floor": "4F"
-			}, {
-				"date": "12月17日",
-				"start": "10:10",
-				"end": "11:10",
-				"teacher": "王欢",
-				"type": "理疗瑜伽",
-				"url": "",
-				"floor": "3F"
-
-			}, {
-				"date": "12月17日",
-				"start": "14:00",
-				"end": "15:00",
-				"teacher": "李婷婷",
-				"type": "瘦身瑜伽",
-				"url": "",
-				"floor": "4F"
-
-			}],
-			"Fri": [{
-
-				"date": "12月18日",
-				"start": "20:30",
-				"end": "21:30",
-				"teacher": "小七",
-				"type": "空中瑜伽",
-				"url": "",
-				"floor": "4F"
-			}, {
-				"date": "12月18日",
-				"start": "16:00",
-				"end": "17:00",
-				"teacher": "张广英",
-				"type": "高温瑜伽",
-				"url": "",
-				"floor": "4F"
-
-			}, {
-				"date": "12月18日",
-				"start": "20:10",
-				"end": "21:10",
-				"teacher": "王欢",
-				"type": "阴瑜伽",
-				"url": "",
-				"floor": "4F"
-
-			}, {
-				"date": "12月18日",
-				"start": "10:00",
-				"end": "11:00",
-				"teacher": "方影",
-				"type": "瘦身瑜伽",
-				"url": "",
-				"floor": "4F"
-			}],
-			"Sat": [{
-
-				"date": "12月19日",
-				"start": "12:50",
-				"end": "13:50",
-				"teacher": "潘丽",
-				"type": "纤体瑜伽",
-				"url": "",
-				"floor": "4F"
-			}, {
-				"date": "12月19日",
-				"start": "18:15",
-				"end": "19:15",
-				"teacher": "吴秋丽",
-				"type": "空中瑜伽",
-				"url": "",
-				"floor": "4F"
-
-			}],
-			"Sun": [{
-
-				"date": "12月20日",
-				"start": "18:15",
-				"end": "19:15",
-				"teacher": "伍倩",
-				"type": "空中瑜伽",
-				"url": "",
-				"floor": "4F"
-			}, {
-				"date": "12月20日",
-				"start": "14:00",
-				"end": "15:00",
-				"teacher": "方影",
-				"type": "瘦身瑜伽",
-				"url": "",
-				"floor": "4F"
-
-			}]
-		}
+	"Field01": {
+		"Value": "动感单车",
+		"R": true,
+		"U": true
 	},
-	"2": {
-		"name": "舞蹈",
-		"desc": "现代舞|肚皮舞|酒吧热舞",
-		"arrange": {
-			"20181214": [{
-				"date": "12月14日",
-				"start": "14:00",
-				"end": "15:00",
-				"teacher": "周敏",
-				"type": "肚皮舞",
-				"url": "",
-				"floor": "3F"
-			}, {
-				"date": "12月14日",
-				"start": "20:30",
-				"end": "21:30",
-				"teacher": "Jody",
-				"type": "酒吧热舞",
-				"url": "",
-				"floor": "3F"
-			}],
-
-			"Tue": [{
-				"date": "12月15日",
-				"start": "10:00",
-				"end": "11:00",
-				"teacher": "张广英",
-				"type": "普拉提",
-				"floor": "4F",
-				"url": ""
-			}, {
-				"date": "12月15日",
-				"start": "14:00",
-				"end": "15:00",
-				"teacher": "King",
-				"type": "普拉提",
-				"floor": "4F",
-				"url": ""
-			}, {
-				"date": "12月15日",
-				"start": "17:10",
-				"end": "18:10",
-				"teacher": "王怡",
-				"type": "拉丁舞",
-				"floor": "3F",
-				"url": ""
-			}, {
-				"date": "12月15日",
-				"start": "18:15",
-				"end": "19:15",
-				"teacher": "叶丹",
-				"type": "中国舞",
-				"floor": "3F",
-				"url": ""
-			}],
-			"Wes": [{
-					"date": "12月16日",
-					"start": "09:00",
-					"end": "10:00",
-					"teacher": "刘洋",
-					"type": "肚皮舞",
-					"floor": "3F",
-					"url": ""
-				},
-				{
-					"date": "12月16日",
-					"start": "17:10",
-					"end": "18:10",
-					"teacher": "刘云",
-					"type": "酒吧热舞",
-					"floor": "3F",
-					"url": ""
-				},
-				{
-					"date": "12月16日",
-					"start": "10:10",
-					"end": "11:10",
-					"teacher": "吉米",
-					"type": "普拉提",
-					"floor": "3F",
-					"url": ""
-				}
-			],
-			"Thur": [{
-					"date": "12月17日",
-					"start": "19:20",
-					"end": "20:20",
-					"teacher": "赵琳儿",
-					"type": "肚皮舞",
-					"floor": "3F",
-					"url": ""
-				},
-				{
-					"date": "12月17日",
-					"start": "16:00",
-					"end": "17:00",
-					"teacher": "刘云",
-					"type": "酒吧热舞",
-					"floor": "3F",
-					"url": ""
-				}, {
-					"date": "12月17日",
-					"start": "20:10",
-					"end": "21:10",
-					"teacher": "庄雅妹",
-					"type": "普拉提",
-					"floor": "3F",
-					"url": ""
-				}, {
-					"date": "12月17日",
-					"start": "18:15",
-					"end": "19:15",
-					"teacher": "叶丹",
-					"type": "中国舞",
-					"url": ""
-				}
-			],
-			"Fri": [{
-				"date": "12月18日",
-				"start": "10:10",
-				"end": "11:10",
-				"teacher": "吉米",
-				"type": "普拉提",
-				"floor": "3F",
-				"url": ""
-			}],
-
-			"Sat": [{
-					"date": "12月19日",
-					"start": "16:00",
-					"end": "17:00",
-					"teacher": "周敏",
-					"type": "肚皮舞",
-					"floor": "3F",
-					"url": ""
-				},
-
-				{
-					"date": "12月19日",
-					"start": "20:10",
-					"end": "21:10",
-					"teacher": "吉米",
-					"type": "普拉提",
-					"floor": "3F",
-					"url": ""
-				}, {
-					"date": "12月19日",
-					"start": "20:30",
-					"end": "21:30",
-					"teacher": "Jody",
-					"type": "爵士舞",
-					"floor": "3F",
-					"url": ""
-				}
-			],
-			"Sun": [{
-				"date": "12月20日",
-				"start": "19:20",
-				"end": "20:20",
-				"teacher": "嘉怡",
-				"type": "肚皮舞",
-				"floor": "3F",
-				"url": ""
-			}]
-
-		}
+	"Field02": {
+		"R": true,
+		"U": true
 	},
-	"3": {
-		"name": "动感单车",
-		"desc": "动感单车",
-		"arrange": {
-			"20181214": [{
-					"start": "14:30",
-					"end": "15:30",
-					"teacher": "大力",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-				{
-					"start": "18:15",
-					"end": "19:15",
-					"teacher": "周文雅",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-				{
-					"start": "19:10",
-					"end": "19:55",
-					"teacher": "周文雅",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				}
-			],
-
-			"Tue": [{
-					"date": "12月15日",
-					"start": "09:00",
-					"end": "10:00",
-					"teacher": "郑美琴",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-				{
-					"date": "12月15日",
-					"start": "19:10",
-					"end": "19:55",
-					"teacher": "陈曦",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				}
-			],
-			"Wes": [{
-					"date": "12月16日",
-					"start": "14:30",
-					"end": "15:30",
-					"teacher": "大力",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-				{
-					"date": "12月16日",
-					"start": "18:15",
-					"end": "19:15",
-					"teacher": "啊佛",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-				{
-					"start": "19:10",
-					"end": "19:55",
-					"teacher": "啊佛",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				}
-			],
-			"Thur": [{
-					"date": "12月17日",
-					"start": "09:00",
-					"end": "10:00",
-					"teacher": "周文雅",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-				{
-					"date": "12月17日",
-					"start": "19:10",
-					"end": "19:55",
-					"teacher": "王超",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				}
-			],
-			"Fri": [{
-					"date": "12月18日",
-					"start": "14:30",
-					"end": "15:30",
-					"teacher": "啊泽",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-				{
-					"date": "12月18日",
-					"start": "18:15",
-					"end": "19:15",
-					"teacher": "周俞伶",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-				{
-					"date": "12月18日",
-					"start": "19:10",
-					"end": "19:55",
-					"teacher": "周俞伶",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				}
-			],
-
-			"Sat": [{
-					"date": "12月19日",
-					"start": "14:30",
-					"end": "15:30",
-					"teacher": "凯伦",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-
-				{
-					"date": "12月19日",
-					"start": "19:10",
-					"end": "19:55",
-					"teacher": "啊佛",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				}
-			],
-			"Sun": [{
-					"date": "12月20日",
-					"start": "14:30",
-					"end": "15:30",
-					"teacher": "啊泉",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				},
-
-				{
-					"date": "12月20日",
-					"start": "19:10",
-					"end": "19:55",
-					"teacher": "王超",
-					"type": "动感单车",
-					"floor": "4F",
-					"url": ""
-				}
-			]
-
-		}
+	"Field31": {
+		"Value": "动感单车\n",
+		"R": true,
+		"U": true
+	},
+	"Field04": {
+		"Value": "",
+		"R": true,
+		"U": true
+	},
+	"Field03": {
+		"R": true,
+		"U": true
+	},
+	"Field05": {
+		"Value": "",
+		"R": true,
+		"U": true
+	},
+	"Creator": {
+		"Value": "a1e38673-ae69-4536-acac-a27dc46da856",
+		"R": true,
+		"U": true
+	},
+	"CreatorPositionId": {
+		"Value": "abb7fb51-fada-4608-bbea-4b35db75f2c7",
+		"R": true,
+		"U": true
+	},
+	"CreateTime": {
+		"Value": "2019-01-07T07:53:07.450Z",
+		"R": true,
+		"U": true
+	},
+	"ModifyBy": {
+		"Value": "a1e38673-ae69-4536-acac-a27dc46da856",
+		"R": true,
+		"U": true
+	},
+	"ModifyTime": {
+		"Value": "2019-01-07T08:05:06.683Z",
+		"R": true,
+		"U": true
+	},
+	"6a4d2a0a-9f64-4db0-897f-3f93631ba1db": {
+		"SubFieldsRoleAction": {
+			"Field20": {
+				"R": true,
+				"U": true
+			},
+			"Field21": {
+				"R": true,
+				"U": true
+			},
+			"Field22": {
+				"R": true,
+				"U": true
+			},
+			"Field24": {
+				"R": true,
+				"U": true
+			},
+			"Field30": {
+				"R": true,
+				"U": true
+			},
+			"CreateTime": {
+				"R": true,
+				"U": true
+			}
+		},
+		"C": true,
+		"D": true,
+		"Value": [],
+		"R": true,
+		"U": true
+	},
+	"b7a62ddb-859f-4b33-8f97-57132ee3580b": {
+		"SubFieldsRoleAction": {
+			"Field25": {
+				"R": true,
+				"U": true
+			},
+			"Field26": {
+				"R": true,
+				"U": true
+			},
+			"Field27": {
+				"R": true,
+				"U": true
+			},
+			"Field28": {
+				"R": true,
+				"U": true
+			},
+			"Field29": {
+				"R": true,
+				"U": true
+			},
+			"CreateTime": {
+				"R": true,
+				"U": true
+			}
+		},
+		"C": true,
+		"D": true,
+		"Value": [],
+		"R": true,
+		"U": true
+	},
+	"3a8e4231-1369-424e-af49-725af911968e": {
+		"SubFieldsRoleAction": {
+			"Field13": {
+				"R": true,
+				"U": true
+			},
+			"Field14": {
+				"R": true,
+				"U": true
+			},
+			"Field15": {
+				"R": true,
+				"U": true
+			},
+			"Field16": {
+				"R": true,
+				"U": true
+			},
+			"Field17": {
+				"R": true,
+				"U": true
+			},
+			"CreateTime": {
+				"R": true,
+				"U": true
+			}
+		},
+		"C": true,
+		"D": true,
+		"Value": [],
+		"R": true,
+		"U": true
+	},
+	"933d1907-945f-4920-9138-bd34bd25142e": {
+		"SubFieldsRoleAction": {
+			"Field7": {
+				"R": true,
+				"U": true
+			},
+			"Field8": {
+				"R": true,
+				"U": true
+			},
+			"Field9": {
+				"R": true,
+				"U": true
+			},
+			"Field10": {
+				"R": true,
+				"U": true
+			},
+			"Field11": {
+				"R": true,
+				"U": true
+			},
+			"Field30": {
+				"R": true,
+				"U": true
+			},
+			"CreateTime": {
+				"R": true,
+				"U": true
+			}
+		},
+		"C": true,
+		"D": true,
+		"Value": [{
+			"Id": "7e7cd44a-d97e-4650-90cc-242bcf500d49",
+			"Field7": "星期一",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  2:30PM",
+			"Field10": "Jan  1 1900  3:30PM",
+			"Field11": "大力",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 1
+		}, {
+			"Id": "023ebfb2-4157-4d56-b837-f6ada877241e",
+			"Field7": "星期一",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  6:15PM",
+			"Field10": "Jan  1 1900  7:15PM",
+			"Field11": "周文雅",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 2
+		}, {
+			"Id": "37a9fbf0-8978-4f96-ba8c-60710fd81687",
+			"Field7": "星期一",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  7:10PM",
+			"Field10": "Jan  1 1900  7:55PM",
+			"Field11": "周文雅",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 3
+		}, {
+			"Id": "f2238bd5-648e-433a-ad4f-91644960f373",
+			"Field7": "星期二",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  9:00AM",
+			"Field10": "Jan  1 1900 10:00AM",
+			"Field11": "郑美琴",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 4
+		}, {
+			"Id": "77f5d80c-b587-43da-9460-7a7d1423edc7",
+			"Field7": "星期二",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  7:10PM",
+			"Field10": "Jan  1 1900  7:55PM",
+			"Field11": "陈曦",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 5
+		}, {
+			"Id": "6ac04770-5460-4944-addc-a7f67149b043",
+			"Field7": "星期三",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  2:30PM",
+			"Field10": "Jan  1 1900  3:30PM",
+			"Field11": "大力",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 6
+		}, {
+			"Id": "7198895a-a2b2-4007-8200-f3af7dbdad85",
+			"Field7": "星期三",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  6:15PM",
+			"Field10": "Jan  1 1900  7:15PM",
+			"Field11": "啊佛",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 7
+		}, {
+			"Id": "3eebf5ef-d219-4427-9a90-ef7584c71a37",
+			"Field7": "星期三",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  7:10PM",
+			"Field10": "Jan  1 1900  7:55PM",
+			"Field11": "啊佛",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 8
+		}, {
+			"Id": "940469e7-3f6f-40ba-ae45-dcf62f1c7ab8",
+			"Field7": "星期四",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  9:00AM",
+			"Field10": "Jan  1 1900 10:00AM",
+			"Field11": "周文雅",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 9
+		}, {
+			"Id": "0788354e-2b06-4d0a-aa29-5be3a2b51a19",
+			"Field7": "星期四",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  7:10PM",
+			"Field10": "Jan  1 1900  7:55PM",
+			"Field11": "王超",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 10
+		}, {
+			"Id": "944ca21d-0624-4da5-83ac-2c96b98a1aa9",
+			"Field7": "星期五",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  2:30PM",
+			"Field10": "Jan  1 1900  3:30PM",
+			"Field11": "啊泽",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 11
+		}, {
+			"Id": "ccbf5f8e-b020-4ccd-8d12-4535299c976d",
+			"Field7": "星期五",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  6:15PM",
+			"Field10": "Jan  1 1900  7:15PM",
+			"Field11": "周俞伶",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 12
+		}, {
+			"Id": "94d79a6f-542c-47a5-8a76-2408a8d958f8",
+			"Field7": "星期五",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  7:10PM",
+			"Field10": "Jan  1 1900  7:55PM",
+			"Field11": "周俞伶",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 13
+		}, {
+			"Id": "c9bfcf22-f776-4cba-bcdb-38d24ad1e355",
+			"Field7": "星期六",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  2:30PM",
+			"Field10": "Jan  1 1900  3:30PM",
+			"Field11": "凯伦",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 14
+		}, {
+			"Id": "c8609a51-299b-43af-9e24-4718c999429a",
+			"Field7": "星期六",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  7:10PM",
+			"Field10": "Jan  1 1900  7:55PM",
+			"Field11": "啊佛",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 15
+		}, {
+			"Id": "54c7bc83-6ce2-4b43-bb46-0ef75e315ea2",
+			"Field7": "星期日",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  2:30PM",
+			"Field10": "Jan  1 1900  3:30PM",
+			"Field11": "啊泉",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 16
+		}, {
+			"Id": "238cb77d-ba41-40e4-af04-d9ed3fbdec2d",
+			"Field7": "星期日",
+			"Field8": "4F",
+			"Field9": "Jan  1 1900  7:10PM",
+			"Field10": "Jan  1 1900  7:55PM",
+			"Field11": "王超",
+			"Field30": "动感单车",
+			"CreateTime": "2019-01-07T07:53:07.450Z",
+			"OrderIndex": 17
+		}],
+		"R": true,
+		"U": true
+	},
+	"RoleAction": {
+		"C": true,
+		"R": true,
+		"LU": false,
+		"U": true,
+		"D": true,
+		"IgnoreDefault": true,
+		"SU": false,
+		"Control": false,
+		"Veto": false,
+		"Export": true,
+		"Archive": true
 	}
 }
